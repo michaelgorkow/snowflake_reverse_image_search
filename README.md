@@ -58,6 +58,18 @@ Note: Providing all privileges is not recommended for production.
    conda activate pysnowpark_reverse_image_search
    ```
 
-5. Run the ```reverse_image_search.ipynb``` notebook.
+5. Run the ```reverse_image_search.ipynb``` notebook until you have set up all the Snowflake objects. (especially the image registry)
+
+
+5. Build and upload the containers:
+   ```sh
+   docker build --platform linux/amd64 -t org-account.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/dinov2_base:latest .
+   docker push org-account.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/dinov2_base:latest
+
+   docker build --platform linux/amd64 -t org-account.registry.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/image_similarity_app:latest .
+   docker push org-account.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/image_similarity_app:latest
+   ```
+
+5. Continue with the ```reverse_image_search.ipynb``` notebook.
 
 6. Open the Streamlit App using the link generated in the notebook.
