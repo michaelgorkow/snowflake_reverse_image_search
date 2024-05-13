@@ -1,0 +1,5 @@
+docker build --platform linux/amd64 -t sfseeurope-prod-demo-gorkow.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/dinov2_base:latest .
+docker push sfseeurope-prod-demo-gorkow.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/dinov2_base:latest
+
+docker build --platform linux/amd64 -t sfseeurope-prod-demo-gorkow.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/image_similarity_app:latest .
+docker push sfseeurope-prod-demo-gorkow.registry.snowflakecomputing.com/reverse_image_search/public/image_repository/image_similarity_app:latest

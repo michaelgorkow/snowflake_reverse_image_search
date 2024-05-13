@@ -1,0 +1,19 @@
+name: pysnowpark_reverse_image_search
+channels:
+  - https://repo.anaconda.com/pkgs/snowflake
+dependencies:
+  - python=3.11
+  - ipykernel
+  - pip
+  - pip:
+    # Snowflake
+    - snowflake-snowpark-python[pandas]==1.14.0
+    - snowflake
+    - python-dotenv
+    - datasets
+    - matplotlib
+    - Pillow
+    - scikit-image
+    - pandarallel
+    - scikit-learn
+    - streamlit

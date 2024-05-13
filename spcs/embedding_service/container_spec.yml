@@ -1,0 +1,23 @@
+spec:
+  container:
+  - name: dinov2-base-service-container
+    image: /reverse_image_search/public/image_repository/dinov2_base:latest
+    resources:
+      requests:
+        nvidia.com/gpu: 1
+      limits:
+        nvidia.com/gpu: 1
+    env:
+      MODEL: facebook/dinov2-base
+    volumeMounts:
+      - name: container-files
+        mountPath: /models
+  endpoint:
+  - name: api
+    port: 9000
+    public: True
+  volume:
+  - name: container-files
+    source: "@REVERSE_IMAGE_SEARCH.PUBLIC.CONTAINER_FILES"
+    uid: 1000
+    gid: 1000

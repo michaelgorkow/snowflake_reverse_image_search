@@ -1,0 +1,8 @@
+spec:
+  container:
+  - name: image-similarity-app
+    image: /reverse_image_search/public/image_repository/image_similarity_app:latest
+  endpoint:
+  - name: api
+    port: 8501
+    public: True
