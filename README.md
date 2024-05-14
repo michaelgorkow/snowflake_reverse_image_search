@@ -73,3 +73,7 @@ Note: Providing all privileges is not recommended for production.
 5. Continue with the ```reverse_image_search.ipynb``` notebook.
 
 6. Open the Streamlit App using the link generated in the notebook.
+
+## Demo Video of the Streamlit App
+https://github.com/michaelgorkow/snowflake_reverse_image_search/assets/28981844/7d95b25b-aecb-417c-8b64-cf97d8c7dfe4
+
